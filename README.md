@@ -77,5 +77,14 @@ Test results:
 
 ![image](https://user-images.githubusercontent.com/17888029/233867524-c969ec15-4790-4a79-a900-0a95b96f71b9.png)
 
+Commands:
+
+Test: npm run test
+build: npm run build
+start with nodemon: npm run start
+
+The solution was deployed to Vercel the working link is the following:
+https://clinic-search-api.vercel.app/
+
 
 
