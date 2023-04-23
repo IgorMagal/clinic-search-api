@@ -6,7 +6,8 @@
     "start": "tsc && node dist/index.js",
     "dev": "ts-node-dev src/index.ts",
     "test": "jest --verbose --coverage --watchAll --config=jest.config.js",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "build": "tsc -b"
   },
   "jest": {
     "preset": "ts-jest",
@@ -36,6 +37,7 @@
   "compilerOptions": {
     "types": [
       "jest"
-    ]
+    ],
+    "outDir": "dist"
   }
 }
