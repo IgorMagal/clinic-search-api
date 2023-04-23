@@ -6,7 +6,7 @@
     "start": "nodemon src/index.ts",
     "build": "rimraf dist && tsc",
     "ts.check": "tsc --project tsconfig.json",
-    "add-build": "git add dist",
+    "add-build": "git add dist -f",
     "test": "jest --verbose --coverage --watchAll --config=jest.config.js"
   },
   "jest": {
