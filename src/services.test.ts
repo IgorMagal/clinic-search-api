@@ -1,7 +1,6 @@
 import axios from "axios";
 import { fetchClinics } from "./services";
-import MockAdapter from "axios-mock-adapter";
-import { Clinic, QueryParams } from "./models";
+import { QueryParams } from "./models";
 
 describe("GET /clinics", () => {
   it("should return the expected clinics when no params are provided", async () => {

@@ -1,2 +1,5 @@
 # clinic-search-api
-Scratch  - Software Engineer Challenge
+
+Scratch - Software Engineer Challenge
+
+Assumptions:

@@ -1,11 +1,12 @@
 // Importing the Express module
-import express from "express";
+import express, { Application, Response, Request } from "express";
 import { QueryParams } from "./models";
 import { fetchClinics } from "./services";
 import rateLimit from "express-rate-limit";
 
 // Creating an instance of the Express application
-const app = express();
+
+const app: Application = express();
 
 // Setting the port to listen for incoming requests
 const port = process.env.PORT || 3000;
@@ -18,7 +19,7 @@ const limiter = rateLimit({
 app.use(limiter);
 
 // Defining a route to handle GET requests to the root path of the server
-app.get("/", (req, res) => {
+app.get("/", (req: Request, res: Response) => {
   res.json({
     message:
       "Hello, this is a  API created by IgorMagal for the Scratch clinic search project.",
@@ -26,7 +27,7 @@ app.get("/", (req, res) => {
 });
 
 // Defining a route to handle GET requests containing the clinic results:
-app.get("/clinics", async (req, res) => {
+app.get("/clinics", async (req: Request, res: Response) => {
   try {
     const { name, state, type, from, to, page, limit } =
       req.query as QueryParams & { page?: string; limit?: string };
